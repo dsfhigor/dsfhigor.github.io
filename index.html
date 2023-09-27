@@ -74,45 +74,29 @@
     </section>
     <section class="container">
         <div class="main">
-            <div class="#skills" id="skills">
+            <div class="skills" id="skills">
                 <h1>Skills</h1>
-            </div> 
+            </div>
         </div>
     </section>
     <section class="container">
         <div class="main">
-            <div class="#portifolio" id="portifolio">
+            <div class="portifolio" id="portifolio">
                 <h1>Portifolio</h1>
-            </div> 
+            </div>
         </div>
     </section>
     <section class="container">
         <div class="main">
-            <div class="#contact" id="contact">
+            <div class="contact" id="contact">
                 <h1>Contato</h1>
-            </div> 
+            </div>
         </div>
     </section>
-
-    <script>
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const body = document.body;
-        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
-        if (isDarkMode) {
-            body.classList.add('dark-mode');
-            darkModeToggle.checked = true;
-        }
-        darkModeToggle.addEventListener('change', () => {
-            if (darkModeToggle.checked) {
-                body.classList.add('dark-mode');
-                localStorage.setItem('darkMode', 'enabled');
-            } else {
-                body.classList.remove('dark-mode');
-                localStorage.setItem('darkMode', 'disabled');
-            }
-        });
-    </script>
-
+    <div class="btnHome">
+        <button onclick="topFunction()" id="btnHome" title="Go to top">Inicio</button>
+    </div>
 </body>
+<script src="scripts/index.js"></script>
 
 </html>
