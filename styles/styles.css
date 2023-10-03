@@ -128,28 +128,6 @@ li a:hover {
     place-items: center;
 }
 
-#btnHome {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 18px;
-}
-button{
-    text-align: right;
-    float: left;
-}
-
-#btnHome:hover {
-    background-color: #1b1f27;
-}
-
 .social {
     display: flex;
     flex-wrap: wrap;
@@ -178,6 +156,27 @@ button{
 
 .main h3 {
     font-size: 1.5rem;
+}
+
+.btnHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 16px;
+    bottom: 0%;
+    right: 0%;
+    margin: 20px;
+    padding: 12px 16px;
+    border-radius: 20%;
+    border: none;
+}
+
+/* Darker background on mouse-over */
+.btnHome:hover {
+    background-color: RoyalBlue;
 }
 
 .images::before {
