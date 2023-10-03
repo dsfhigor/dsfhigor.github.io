@@ -198,6 +198,10 @@ li a:hover {
     z-index: -1;
 }
 
+.form {
+    
+}
+
 .dark-mode {
     background-color: var(--primary-dark);
     color: #ffffff;
