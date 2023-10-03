@@ -118,11 +118,6 @@ li a:hover {
     place-items: center;
 }
 
-.portifolio {
-    display: grid;
-    place-items: center;
-}
-
 .contact {
     display: grid;
     place-items: center;
