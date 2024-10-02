@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     <header class="container">
         <div class="page-header">
             <div class="logo">
-                <a href="#">H</a>
+                <a href="#">HF</a>
             </div>
             <input type="checkbox" id="click">
 
@@ -25,10 +25,10 @@
                 </div>
             </label>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#about">Sobre</a></li>
             </ul>
             <label class="mode">
                 <input type="checkbox" id="darkModeToggle">
@@ -36,15 +36,12 @@
             </label>
         </div>
     </header>
-
-
     <section class="container">
         <div class="main">
             <div class="detail">
                 <h3>Olá,</h3>
                 <h1>Meu nome é <span style="color:#084695;">Higor</span></h1>
-                <p>Gosto de desenvolver ferramentas que possam ser uteis no dia a dia dos mais diversos usuários.
-                </p>
+                <p>Sou desenvolvedor Fullstack.</p>
                 <div class="social">
                     <a href="https://www.linkedin.com/in/higor-flores/" target="_blank"><i
                             class='bx bxl-linkedin'></i></a>
@@ -60,58 +57,45 @@
             </div>
         </div>
     </section>
+</section>
+<section class="container">
+    <div class="main">
+        <div class="skills" id="skills">
+            <h1>Area de Conhecimento</h1>
+            
+            <p>Section em desenvolvimento</p>
+        </div>
+    </div>
+</section>
+<section class="container">
+    <div class="main">  
+        <div class="projects" id="projects">
+
+            <h1>Projetos</h1>
+            <div class="card" style="width: 18rem;">
+                <img class="images" src="assets/america.png" alt="America Prestadora de Servicos">
+                <div class="containerCard">
+                  <h3 class="card-title">America Service</h3>
+                  <p >Site desenvolvido para empresa no ramo de limpeza predial e empresarial.</p>
+                  <a href="http://www.americaprestadora.com.br/" class="btnCard" target="_blank">Acessar</a>
+                </div>                        
+            </div>
+        </div>
+    </div>
+    
+</section>
+
     <section class="container">
         <div class="main">
             <div class="about" id="about">
                 <h1>Sobre</h1>
-                <p class="sobre">Meu nome é Higor da Silva Flores,
+                <p class="about">Meu nome é Higor da Silva Flores,
                     sou formado em Análise e Desenvolvimento de Sistemas e Técnico em Informática.
                 </p>
                 <p>Fullstack Developer</p>
             </div>
         </div>
     </section>
-    <section class="container">
-        <div class="main">
-            <div class="skills" id="skills">
-                <h1>Skills</h1>
-            </div>
-        </div>
-    </section>
-    <section class="container">
-        <div class="main">
-            <div class="contact" id="contact">
-                <h1>Contato</h1>
-                <div class="row">
-                    <form action="https://formspree.io/f/xeqbpzvj" method="POST" target="_blank" class="form">
-                        <div class="col-10">
-                            <label> Nome:</label>
-                        </div>
-                        <div class="col-90">
-                            <input type="name" name="name" placeholder="Seu nome.">
-                        </div>
-                        <div class="col-10">
-                            <label> Email:</label>
-                        </div>
-                        <div class="col-90">
-                            <input type="email" name="email" placeholder="Seu email.">
-                        </div>
-
-                        <div class="col-10">
-                            <label>Sua mensagem:</label>
-                        </div>
-                        <div class="col-90"> <textarea name="message" placeholder="Escreva algo." id="message" required></textarea>
-                        </div>
-                        <div class="row">
-                            <input type="submit" value="Enviar">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <button onclick="topFunction()" class="btnHome" id="btnHome"><i class="fa fa-home"></i></button>
 </body>
 <script src="scripts/index.js"></script>
-
 </html>
