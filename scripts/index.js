@@ -32,3 +32,13 @@ darkModeToggle.addEventListener('change', () => {
         localStorage.setItem('darkMode', 'disabled');
     }
 });
+
+const cards = document.querySelectorAll('.skill-card');
+
+// Adiciona um evento de clique a cada cartão
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+        // Alterna a classe 'is-flipped' para ativar a animação CSS
+        card.classList.toggle('is-flipped');
+    });
+});
