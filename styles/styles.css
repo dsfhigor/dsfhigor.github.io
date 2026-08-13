@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@500;600&display=swap");html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
 @media (min-width: 576px) {
   /* Config para celulares */
   .container {
@@ -6,7 +14,7 @@
 }
 @media (min-width: 768px) {
   /* Config para tablets */
-  .container {
+  header .container {
     display: flex; /* Organiza os itens em linha */
   }
 }
@@ -25,3 +33,145 @@
     padding: 0 20px; /* Adiciona padding nas laterais */
   }
 }
+h2{
+  align-items: center;
+}
+:root{
+  --primary-color: #f0f0f0;
+  --secondary-color: #333;
+  --accent-color: #007bff;
+  --background-color: #fff;
+  --text-color: #000;
+}
+body.dark-mode {
+  --primary-color: #333;
+  --secondary-color: #f0f0f0;
+  --accent-color: #007bff;
+  --background-color: #000;
+  --text-color: #fff;
+}
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'DM Sans', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+.darkMode{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+ /* ---------- BOTÃO HAMBÚRGUER ---------- */
+.hamburger{
+  width:42px; height:42px;
+  border-radius:8px;
+  border:1px solid var(--secondary-color);
+  background:var(--primary-color);
+  cursor:pointer;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  padding:0;
+}
+.hamburger span{
+  display:block;
+  width:20px; height:2px;
+  background:var(--text-color);
+  border-radius:2px;
+  transition: transform .25s ease, opacity .25s ease;
+}
+.hamburger.open span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+ 
+/* ---------- OVERLAY + MENU CENTRALIZADO ---------- */
+.overlay{
+  position:fixed; inset:0;
+  background:rgba(0,0,0,0.55);
+  opacity:0; pointer-events:none;
+  transition:opacity .25s ease;
+  z-index:30;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.overlay.show{ opacity:1; pointer-events:auto; }
+ 
+.sidebar{
+  width:300px;
+  max-width:90vw;
+  background:var(--primary-color);
+  border:1px solid var(--secondary-color);
+  border-radius:14px;
+  box-shadow:0 24px 60px rgba(0,0,0,0.45);
+  transform:scale(0.94);
+  opacity:0;
+  transition: transform .25s ease, opacity .25s ease;
+  overflow:hidden;
+}
+.overlay.show .sidebar{
+  transform:scale(1);
+  opacity:1;
+}
+ 
+.sidebar-head{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:18px 20px;
+  border-bottom:1px solid var(--secondary-color);
+}
+.sidebar-head strong{ font-size:15px; letter-spacing:.02em; color:var(--text-color); }
+.sidebar-close{
+  background:none; border:none; color:var(--secondary-color);
+  font-size:18px; cursor:pointer; line-height:1;
+  padding:4px;
+}
+.sidebar-close:hover{ color:var(--text-color); }
+ 
+/* ---------- LISTA DO MENU ---------- */
+.menu{
+  list-style:none;
+  margin:0;
+  padding:10px;
+}
+.menu li + li{ margin-top:4px; }
+.menu a{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 16px;
+  border-radius:10px;
+  color:var(--text-color);
+  text-decoration:none;
+  font-size:15px;
+  font-weight:500;
+  cursor:pointer;
+  transition:background .15s ease, color .15s ease;
+}
+.menu a:hover{ background:var(--secondary-color); color:var(--accent-color); }
+.menu a.active{ background:var(--secondary-color); color:var(--accent-color); }
+.menu a .icon{ font-size:17px; }
+ 
+.sidebar-footer{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:14px 20px 18px;
+  border-top:1px solid var(--secondary-color);
+}
+.sidebar-footer span{
+  width:8px; height:8px;
+  border-radius:50%;
+  background:var(--secondary-color);
+  display:inline-block;
+}
+ 
+/* ---------- SEÇÕES DO SITE (trocam de "página") ---------- */
+.section{ display:none; }
+.section.active{ display:block; }
+ 
+/* ---------- BOTÃO/LOGO "Portifolio" ---------- */
+.btn{ text-decoration:none; color:var(--text-color); }
